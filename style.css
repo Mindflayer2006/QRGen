@@ -1,0 +1,301 @@
+:root {
+    --primary-color: rgb(0, 60, 255);
+    --primary-hover: rgb(0, 34, 147);
+    --bg-color: rgb(195, 208, 217);
+    --text-color: black;
+    --white: white;
+    --font-family: "Poppins", sans-serif;
+    --border-radius: 30px;
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.top {
+    background-color: var(--white);
+    font-size: 1.75rem;
+    padding: 1rem 5%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.top-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.top span {
+    color: var(--primary-color);
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background-color: var(--white);
+    margin: 2rem 0;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+}
+
+.inp {
+    flex: 3;
+    padding: 1rem;
+    min-width: 300px;
+}
+
+.inp p {
+    font-size: 1.75rem;
+    text-decoration: underline;
+}
+
+.qr {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    padding: 1rem;
+    flex-direction: column; /* Stack QR and button */
+    gap: 20px; /* Add space between QR and download button */
+}
+
+.qrcode {
+    height: 250px;
+    opacity: 25%;
+    max-width: 100%;
+}
+
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.btns button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--white);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.btns button:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.btns button:focus {
+    background-color: var(--primary-color);
+    color: var(--white);
+    outline: none;
+}
+
+.btns button:active {
+    transform: scale(0.95);
+}
+
+.url {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#urlinp {
+    width: 80%;
+    height: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid lightgray;
+    padding: 0.25rem 1rem;
+    font-size: 1.1rem;
+}
+
+#urlbtn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    max-width: 250px;
+    border-radius: 30px;
+    border: none;
+    padding: 0.5rem 0.25rem;
+    font-size: 1rem;
+    margin: 1rem 0rem;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#urlbtn:hover {
+    background-color: var(--primary-hover);
+}
+
+#urlbtn:active {
+    transform: scale(0.95);
+}
+
+/* Common form input styling */
+input[type="text"], input[type="email"], input[type="url"] {
+    width: 80%;
+    height: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid lightgray;
+    padding: 0.25rem 1rem;
+    font-size: 1.1rem;
+}
+
+/* Common button styling */
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    max-width: 250px;
+    border-radius: 30px;
+    border: none;
+    padding: 0.5rem 0.25rem;
+    font-size: 1rem;
+    margin: 1rem 0rem;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+.btns button.selected {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.download-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: 500px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 200px; /* Fixed width for consistency */
+    text-align: center; /* Ensures text is centered */
+}
+
+.download-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.text-form p, .email-form p {
+    font-size: 1.75rem;
+    text-decoration: underline;
+}
+
+.text-form button, .email-form button {
+    margin-top: 1rem;
+}
+
+/* Styling for forms */
+.form {
+    display: none;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.qrcode.blinking {
+    animation: blink 2s ease-in-out 3; /* Blinks 3 times */
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+/* Apply fade-in effect to the form */
+.form.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-section {
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.8rem 3%;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .top-text {
+        font-size: 1.5rem;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .qr {
+        min-width: auto; /* Allow it to take available width */
+    }
+}

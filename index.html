@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRGen</title>
+    <link rel="shortcut icon" href="Img/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top">
+        <img src="Img/qr.png" alt="QRGen Logo" class="logo">
+        <span>QRGen</span>
+    </nav>
+    <div class="main">
+        <div class="inp">
+            <p>Create Your QR with just a Click!</p>
+            <ul class="btns">
+                <li id="url"><button>URL</button></li>
+                <li id="text"><button>Text</button></li>
+                <li id="email"><button>Email</button></li>
+            </ul>
+            <div class="form-section">
+                <form class="form url-form">
+                    <p>Submit URL</p>
+                    <input type="url" placeholder="https://www.example.com" id="urlinp">
+                    <button type="submit" id="urlbtn">Generate QR</button>
+                </form>
+                <form class="form text-form">
+                    <p>Enter Text</p>
+                    <input type="text" placeholder="Enter text here" id="textinp">
+                    <button type="submit" id="textbtn">Generate QR</button>
+                </form>
+                <form class="form email-form">
+                    <p>Enter Email</p>
+                    <input type="email" placeholder="example@email.com" id="emailinp">
+                    <button type="submit" id="emailbtn">Generate QR</button>
+                </form>
+            </div>
+        </div>
+        <div class="qr">
+            <img src="Img/qr-code.png" alt="QR" class="qrcode">
+            <button id="downloadBtn" class="download-btn">Download QR</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
